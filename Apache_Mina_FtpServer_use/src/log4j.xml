@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+
+<log4j:configuration>
+ 
+    <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm}] %5p [%C{1}(%M:%L)] :%m%n%n"/>
+        </layout>
+    </appender>
+    
+    <appender name="file" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="file" value="./logs/dailyout.log"/>
+        <param name="Append" value="true"/>
+        <param name="DatePattern" value="'.'yyMMdd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%t> [%d{yyyy-MM-dd HH:mm:ss}] [%c{1}] [%L] [%p] %m %n"/>
+                        <!--  
+                                main> [2013-11-14 15:59:17] [client] [18] [INFO] info1 
+                                main> [2013-11-14 15:59:17] [client] [19] [ERROR] error1 
+                                main> [2013-11-14 15:59:17] [client] [21] [DEBUG] debug11
+                                dailyout.log                                
+                                dailyout.log.131113
+                        -->
+        </layout>
+    </appender>
+    
+    <category name="client">
+        <priority value="DEBUG"/>
+    </category>
+ 
+    <category name="server">
+        <priority value="DEBUG"/>
+    </category>
+    <root>
+        <priority value="INFO"/>
+            <!-- System.Out -->
+        <appender-ref ref="stdout"/>
+            <!-- File Write -->
+        <appender-ref ref="file"/>
+         
+    </root>
+</log4j:configuration>

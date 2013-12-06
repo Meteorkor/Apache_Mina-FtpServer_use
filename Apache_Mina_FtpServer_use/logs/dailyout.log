@@ -1,0 +1,476 @@
+main> [2013-12-05 17:23:56] [DefaultFtpServer] [89] [INFO] FTP server started 
+main> [2013-12-05 17:25:18] [DefaultFtpServer] [89] [INFO] FTP server started 
+NioProcessor-3> [2013-12-05 17:25:27] [FtpLoggingFilter] [159] [INFO] CREATED 
+pool-3-thread-1> [2013-12-05 17:25:27] [FtpLoggingFilter] [159] [INFO] OPENED 
+pool-3-thread-1> [2013-12-05 17:25:27] [FtpLoggingFilter] [141] [INFO] SENT: 220 Service ready for new user.
+ 
+pool-3-thread-1> [2013-12-05 17:25:27] [FtpLoggingFilter] [84] [INFO] RECEIVED: USER anonymous 
+pool-3-thread-2> [2013-12-05 17:25:27] [FtpLoggingFilter] [141] [INFO] SENT: 331 Guest login okay, send your complete e-mail address as password.
+ 
+pool-3-thread-1> [2013-12-05 17:25:27] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASS ***** 
+pool-3-thread-1> [2013-12-05 17:25:27] [PASS] [170] [WARN] User failed to log in 
+pool-3-thread-1> [2013-12-05 17:25:27] [PASS] [213] [WARN] Login failure - anonymous 
+pool-3-thread-2> [2013-12-05 17:25:27] [FtpLoggingFilter] [141] [INFO] SENT: 530 Authentication failed.
+ 
+pool-3-thread-2> [2013-12-05 17:25:27] [FtpLoggingFilter] [159] [INFO] CLOSED 
+NioProcessor-4> [2013-12-05 17:28:23] [FtpLoggingFilter] [159] [INFO] CREATED 
+pool-3-thread-3> [2013-12-05 17:28:23] [FtpLoggingFilter] [159] [INFO] OPENED 
+pool-3-thread-3> [2013-12-05 17:28:23] [FtpLoggingFilter] [141] [INFO] SENT: 220 Service ready for new user.
+ 
+pool-3-thread-3> [2013-12-05 17:28:23] [FtpLoggingFilter] [84] [INFO] RECEIVED: USER asd 
+pool-3-thread-3> [2013-12-05 17:28:23] [FtpLoggingFilter] [141] [INFO] SENT: 331 User name okay, need password for asd.
+ 
+pool-3-thread-3> [2013-12-05 17:28:23] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASS ***** 
+pool-3-thread-3> [2013-12-05 17:28:23] [PASS] [170] [WARN] User failed to log in 
+pool-3-thread-3> [2013-12-05 17:28:24] [PASS] [213] [WARN] Login failure - asd 
+pool-3-thread-3> [2013-12-05 17:28:24] [FtpLoggingFilter] [141] [INFO] SENT: 530 Authentication failed.
+ 
+pool-3-thread-3> [2013-12-05 17:28:24] [FtpLoggingFilter] [159] [INFO] CLOSED 
+main> [2013-12-05 17:29:02] [SslConfigurationFactory] [363] [ERROR] DefaultSsl.configure() 
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at sun.security.provider.JavaKeyStore.engineLoad(JavaKeyStore.java:645)
+	at sun.security.provider.JavaKeyStore$JKS.engineLoad(JavaKeyStore.java:55)
+	at java.security.KeyStore.load(KeyStore.java:1214)
+	at org.apache.ftpserver.ssl.SslConfigurationFactory.loadStore(SslConfigurationFactory.java:305)
+	at org.apache.ftpserver.ssl.SslConfigurationFactory.createSslConfiguration(SslConfigurationFactory.java:326)
+	at com.meteor.main.Main.main(Main.java:29)
+main> [2013-12-05 17:29:39] [SslConfigurationFactory] [363] [ERROR] DefaultSsl.configure() 
+org.apache.ftpserver.FtpServerConfigurationException: Key store could not be loaded from src\test\resources\ftpserver.jks
+	at org.apache.ftpserver.ssl.SslConfigurationFactory.loadStore(SslConfigurationFactory.java:300)
+	at org.apache.ftpserver.ssl.SslConfigurationFactory.createSslConfiguration(SslConfigurationFactory.java:326)
+	at com.meteor.main.Main.main(Main.java:30)
+main> [2013-12-05 17:30:00] [SslConfigurationFactory] [363] [ERROR] DefaultSsl.configure() 
+org.apache.ftpserver.FtpServerConfigurationException: Key store could not be loaded from src\test\resources\ftpserver.jks
+	at org.apache.ftpserver.ssl.SslConfigurationFactory.loadStore(SslConfigurationFactory.java:300)
+	at org.apache.ftpserver.ssl.SslConfigurationFactory.createSslConfiguration(SslConfigurationFactory.java:326)
+	at com.meteor.main.Main.main(Main.java:30)
+main> [2013-12-05 17:48:45] [DefaultFtpServer] [89] [INFO] FTP server started 
+NioProcessor-3> [2013-12-05 17:49:23] [FtpLoggingFilter] [159] [INFO] CREATED 
+pool-3-thread-1> [2013-12-05 17:49:23] [FtpLoggingFilter] [159] [INFO] OPENED 
+pool-3-thread-1> [2013-12-05 17:49:23] [FtpLoggingFilter] [141] [INFO] SENT: 220 Service ready for new user.
+ 
+pool-3-thread-1> [2013-12-05 17:49:23] [FtpLoggingFilter] [84] [INFO] RECEIVED: USER asd 
+pool-3-thread-2> [2013-12-05 17:49:23] [FtpLoggingFilter] [141] [INFO] SENT: 331 User name okay, need password for asd.
+ 
+pool-3-thread-1> [2013-12-05 17:49:23] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASS ***** 
+pool-3-thread-1> [2013-12-05 17:49:23] [PASS] [170] [WARN] User failed to log in 
+pool-3-thread-1> [2013-12-05 17:49:23] [PASS] [213] [WARN] Login failure - asd 
+pool-3-thread-2> [2013-12-05 17:49:23] [FtpLoggingFilter] [141] [INFO] SENT: 530 Authentication failed.
+ 
+pool-3-thread-2> [2013-12-05 17:49:23] [FtpLoggingFilter] [159] [INFO] CLOSED 
+NioProcessor-4> [2013-12-05 17:49:28] [FtpLoggingFilter] [159] [INFO] CREATED 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [159] [INFO] OPENED 
+pool-3-thread-2> [2013-12-05 17:49:28] [FtpLoggingFilter] [141] [INFO] SENT: 220 Service ready for new user.
+ 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [84] [INFO] RECEIVED: USER kim 
+pool-3-thread-2> [2013-12-05 17:49:28] [FtpLoggingFilter] [141] [INFO] SENT: 331 User name okay, need password for kim.
+ 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASS ***** 
+pool-3-thread-1> [2013-12-05 17:49:28] [PASS] [246] [INFO] Login success - kim 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [141] [INFO] SENT: 230 User logged in, proceed.
+ 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [84] [INFO] RECEIVED: SYST 
+pool-3-thread-2> [2013-12-05 17:49:28] [FtpLoggingFilter] [141] [INFO] SENT: 215 UNIX Type: Apache FtpServer
+ 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [84] [INFO] RECEIVED: FEAT 
+pool-3-thread-2> [2013-12-05 17:49:28] [FtpLoggingFilter] [141] [INFO] SENT: 211-Extensions supported
+ SIZE
+ MDTM
+ REST STREAM
+ LANG en;zh-tw;ja;is
+ MLST Size;Modify;Type;Perm
+ AUTH SSL
+ AUTH TLS
+ MODE Z
+ UTF8
+ TVFS
+ MD5
+ MMD5
+ MFMT
+211 End
+ 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS UTF8 ON 
+pool-3-thread-2> [2013-12-05 17:49:28] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS MLST size;modify;type; 
+pool-3-thread-2> [2013-12-05 17:49:28] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [84] [INFO] RECEIVED: PWD 
+pool-3-thread-2> [2013-12-05 17:49:28] [FtpLoggingFilter] [141] [INFO] SENT: 257 "/" is current directory.
+ 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [84] [INFO] RECEIVED: TYPE I 
+pool-3-thread-2> [2013-12-05 17:49:28] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command TYPE okay.
+ 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-2> [2013-12-05 17:49:28] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,194,177)
+ 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [84] [INFO] RECEIVED: MLSD 
+pool-3-thread-1> [2013-12-05 17:49:28] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49841 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-1> [2013-12-05 17:49:28] [FtpLoggingFilter] [141] [INFO] SENT: 226 Closing data connection.
+ 
+NioProcessor-1> [2013-12-05 17:49:41] [FtpLoggingFilter] [159] [INFO] CREATED 
+pool-3-thread-2> [2013-12-05 17:49:41] [FtpLoggingFilter] [159] [INFO] OPENED 
+pool-3-thread-1> [2013-12-05 17:49:41] [FtpLoggingFilter] [141] [INFO] SENT: 220 Service ready for new user.
+ 
+pool-3-thread-2> [2013-12-05 17:49:41] [FtpLoggingFilter] [84] [INFO] RECEIVED: USER kim 
+pool-3-thread-1> [2013-12-05 17:49:41] [FtpLoggingFilter] [141] [INFO] SENT: 331 User name okay, need password for kim.
+ 
+pool-3-thread-2> [2013-12-05 17:49:41] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASS ***** 
+pool-3-thread-2> [2013-12-05 17:49:41] [PASS] [246] [INFO] Login success - kim 
+pool-3-thread-2> [2013-12-05 17:49:41] [FtpLoggingFilter] [141] [INFO] SENT: 230 User logged in, proceed.
+ 
+pool-3-thread-1> [2013-12-05 17:49:41] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS UTF8 ON 
+pool-3-thread-2> [2013-12-05 17:49:41] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-1> [2013-12-05 17:49:41] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS MLST size;modify;type; 
+pool-3-thread-2> [2013-12-05 17:49:41] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-1> [2013-12-05 17:49:41] [FtpLoggingFilter] [84] [INFO] RECEIVED: CWD / 
+pool-3-thread-2> [2013-12-05 17:49:41] [FtpLoggingFilter] [141] [INFO] SENT: 250 Directory changed to /
+ 
+pool-3-thread-1> [2013-12-05 17:49:41] [FtpLoggingFilter] [84] [INFO] RECEIVED: PWD 
+pool-3-thread-2> [2013-12-05 17:49:41] [FtpLoggingFilter] [141] [INFO] SENT: 257 "/" is current directory.
+ 
+pool-3-thread-1> [2013-12-05 17:49:41] [FtpLoggingFilter] [84] [INFO] RECEIVED: TYPE A 
+pool-3-thread-2> [2013-12-05 17:49:41] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command TYPE okay.
+ 
+pool-3-thread-1> [2013-12-05 17:49:41] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-2> [2013-12-05 17:49:41] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,194,195)
+ 
+pool-3-thread-1> [2013-12-05 17:49:41] [FtpLoggingFilter] [84] [INFO] RECEIVED: STOR asa - 복사본.txt 
+pool-3-thread-1> [2013-12-05 17:49:41] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49859 
+pool-3-thread-1> [2013-12-05 17:49:41] [FtpLoggingFilter] [141] [INFO] SENT: 550 /asa - 복사본.txt: Permission denied.
+ 
+pool-3-thread-2> [2013-12-05 17:49:45] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-1> [2013-12-05 17:49:45] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,194,197)
+ 
+pool-3-thread-2> [2013-12-05 17:49:45] [FtpLoggingFilter] [84] [INFO] RECEIVED: MLSD 
+pool-3-thread-2> [2013-12-05 17:49:45] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49861 
+pool-3-thread-2> [2013-12-05 17:49:45] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-2> [2013-12-05 17:49:45] [FtpLoggingFilter] [141] [INFO] SENT: 226 Closing data connection.
+ 
+pool-3-thread-1> [2013-12-05 17:49:47] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-2> [2013-12-05 17:49:47] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,194,199)
+ 
+pool-3-thread-1> [2013-12-05 17:49:47] [FtpLoggingFilter] [84] [INFO] RECEIVED: STOR asa - 복사본.txt 
+pool-3-thread-1> [2013-12-05 17:49:47] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49863 
+pool-3-thread-1> [2013-12-05 17:49:47] [FtpLoggingFilter] [141] [INFO] SENT: 550 /asa - 복사본.txt: Permission denied.
+ 
+pool-3-thread-2> [2013-12-05 17:49:48] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-1> [2013-12-05 17:49:48] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,194,201)
+ 
+pool-3-thread-2> [2013-12-05 17:49:49] [FtpLoggingFilter] [84] [INFO] RECEIVED: MLSD 
+pool-3-thread-2> [2013-12-05 17:49:49] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49865 
+pool-3-thread-2> [2013-12-05 17:49:49] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-2> [2013-12-05 17:49:49] [FtpLoggingFilter] [141] [INFO] SENT: 226 Closing data connection.
+ 
+pool-3-thread-1> [2013-12-05 17:49:51] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-2> [2013-12-05 17:49:51] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,194,204)
+ 
+pool-3-thread-1> [2013-12-05 17:49:51] [FtpLoggingFilter] [84] [INFO] RECEIVED: STOR out.txt 
+pool-3-thread-1> [2013-12-05 17:49:51] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49868 
+pool-3-thread-1> [2013-12-05 17:49:51] [FtpLoggingFilter] [141] [INFO] SENT: 550 /out.txt: Permission denied.
+ 
+pool-3-thread-2> [2013-12-05 17:49:52] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-1> [2013-12-05 17:49:52] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,194,206)
+ 
+pool-3-thread-2> [2013-12-05 17:49:52] [FtpLoggingFilter] [84] [INFO] RECEIVED: MLSD 
+pool-3-thread-2> [2013-12-05 17:49:52] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49870 
+pool-3-thread-2> [2013-12-05 17:49:52] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-2> [2013-12-05 17:49:52] [FtpLoggingFilter] [141] [INFO] SENT: 226 Closing data connection.
+ 
+main> [2013-12-05 17:50:29] [DefaultFtpServer] [89] [INFO] FTP server started 
+NioProcessor-3> [2013-12-05 17:50:37] [FtpLoggingFilter] [159] [INFO] CREATED 
+pool-3-thread-1> [2013-12-05 17:50:37] [FtpLoggingFilter] [159] [INFO] OPENED 
+pool-3-thread-1> [2013-12-05 17:50:37] [FtpLoggingFilter] [141] [INFO] SENT: 220 Service ready for new user.
+ 
+pool-3-thread-1> [2013-12-05 17:50:37] [FtpLoggingFilter] [84] [INFO] RECEIVED: USER kim 
+pool-3-thread-2> [2013-12-05 17:50:37] [FtpLoggingFilter] [141] [INFO] SENT: 331 User name okay, need password for kim.
+ 
+pool-3-thread-2> [2013-12-05 17:50:37] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASS ***** 
+pool-3-thread-2> [2013-12-05 17:50:37] [PASS] [246] [INFO] Login success - kim 
+pool-3-thread-2> [2013-12-05 17:50:37] [FtpLoggingFilter] [141] [INFO] SENT: 230 User logged in, proceed.
+ 
+pool-3-thread-2> [2013-12-05 17:50:37] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS UTF8 ON 
+pool-3-thread-1> [2013-12-05 17:50:37] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-2> [2013-12-05 17:50:37] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS MLST size;modify;type; 
+pool-3-thread-1> [2013-12-05 17:50:37] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-2> [2013-12-05 17:50:37] [FtpLoggingFilter] [84] [INFO] RECEIVED: CWD / 
+pool-3-thread-1> [2013-12-05 17:50:37] [FtpLoggingFilter] [141] [INFO] SENT: 250 Directory changed to /
+ 
+pool-3-thread-2> [2013-12-05 17:50:37] [FtpLoggingFilter] [84] [INFO] RECEIVED: TYPE A 
+pool-3-thread-1> [2013-12-05 17:50:37] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command TYPE okay.
+ 
+pool-3-thread-2> [2013-12-05 17:50:37] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-1> [2013-12-05 17:50:37] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,194,250)
+ 
+pool-3-thread-2> [2013-12-05 17:50:37] [FtpLoggingFilter] [84] [INFO] RECEIVED: STOR out.txt 
+pool-3-thread-2> [2013-12-05 17:50:37] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49914 
+pool-3-thread-2> [2013-12-05 17:50:37] [FtpLoggingFilter] [141] [INFO] SENT: 550 /out.txt: Permission denied.
+ 
+main> [2013-12-05 17:51:54] [DefaultFtpServer] [89] [INFO] FTP server started 
+NioProcessor-3> [2013-12-05 17:51:54] [FtpLoggingFilter] [159] [INFO] CREATED 
+pool-3-thread-1> [2013-12-05 17:51:54] [FtpLoggingFilter] [159] [INFO] OPENED 
+pool-3-thread-1> [2013-12-05 17:51:54] [FtpLoggingFilter] [141] [INFO] SENT: 220 Service ready for new user.
+ 
+pool-3-thread-1> [2013-12-05 17:51:54] [FtpLoggingFilter] [84] [INFO] RECEIVED: USER kim 
+pool-3-thread-2> [2013-12-05 17:51:54] [FtpLoggingFilter] [141] [INFO] SENT: 331 User name okay, need password for kim.
+ 
+pool-3-thread-2> [2013-12-05 17:51:54] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASS ***** 
+pool-3-thread-2> [2013-12-05 17:51:54] [PASS] [246] [INFO] Login success - kim 
+pool-3-thread-2> [2013-12-05 17:51:54] [FtpLoggingFilter] [141] [INFO] SENT: 230 User logged in, proceed.
+ 
+pool-3-thread-2> [2013-12-05 17:51:54] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS UTF8 ON 
+pool-3-thread-1> [2013-12-05 17:51:54] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-2> [2013-12-05 17:51:54] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS MLST size;modify;type; 
+pool-3-thread-1> [2013-12-05 17:51:54] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-2> [2013-12-05 17:51:54] [FtpLoggingFilter] [84] [INFO] RECEIVED: CWD / 
+pool-3-thread-1> [2013-12-05 17:51:54] [FtpLoggingFilter] [141] [INFO] SENT: 250 Directory changed to /
+ 
+pool-3-thread-2> [2013-12-05 17:51:54] [FtpLoggingFilter] [84] [INFO] RECEIVED: TYPE A 
+pool-3-thread-1> [2013-12-05 17:51:54] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command TYPE okay.
+ 
+pool-3-thread-2> [2013-12-05 17:51:54] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-1> [2013-12-05 17:51:54] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,195,40)
+ 
+pool-3-thread-2> [2013-12-05 17:51:54] [FtpLoggingFilter] [84] [INFO] RECEIVED: RETR stone.txt 
+pool-3-thread-2> [2013-12-05 17:51:54] [RETR] [173] [INFO] File downloaded /stone.txt 
+pool-3-thread-2> [2013-12-05 17:51:54] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49960 
+pool-3-thread-2> [2013-12-05 17:51:54] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-2> [2013-12-05 17:51:54] [FtpLoggingFilter] [141] [INFO] SENT: 226 Transfer complete.
+ 
+NioProcessor-4> [2013-12-05 17:52:03] [FtpLoggingFilter] [159] [INFO] CREATED 
+pool-3-thread-1> [2013-12-05 17:52:03] [FtpLoggingFilter] [159] [INFO] OPENED 
+pool-3-thread-2> [2013-12-05 17:52:03] [FtpLoggingFilter] [141] [INFO] SENT: 220 Service ready for new user.
+ 
+pool-3-thread-1> [2013-12-05 17:52:03] [FtpLoggingFilter] [84] [INFO] RECEIVED: USER kim 
+pool-3-thread-2> [2013-12-05 17:52:03] [FtpLoggingFilter] [141] [INFO] SENT: 331 User name okay, need password for kim.
+ 
+pool-3-thread-1> [2013-12-05 17:52:03] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASS ***** 
+pool-3-thread-1> [2013-12-05 17:52:03] [PASS] [246] [INFO] Login success - kim 
+pool-3-thread-1> [2013-12-05 17:52:03] [FtpLoggingFilter] [141] [INFO] SENT: 230 User logged in, proceed.
+ 
+pool-3-thread-1> [2013-12-05 17:52:03] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS UTF8 ON 
+pool-3-thread-2> [2013-12-05 17:52:03] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-1> [2013-12-05 17:52:03] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS MLST size;modify;type; 
+pool-3-thread-2> [2013-12-05 17:52:03] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-1> [2013-12-05 17:52:03] [FtpLoggingFilter] [84] [INFO] RECEIVED: PWD 
+pool-3-thread-2> [2013-12-05 17:52:03] [FtpLoggingFilter] [141] [INFO] SENT: 257 "/" is current directory.
+ 
+pool-3-thread-1> [2013-12-05 17:52:07] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-2> [2013-12-05 17:52:07] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,195,54)
+ 
+pool-3-thread-1> [2013-12-05 17:52:07] [FtpLoggingFilter] [84] [INFO] RECEIVED: RETR stone.txt 
+pool-3-thread-1> [2013-12-05 17:52:07] [RETR] [173] [INFO] File downloaded /stone.txt 
+pool-3-thread-1> [2013-12-05 17:52:07] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49974 
+pool-3-thread-1> [2013-12-05 17:52:07] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-1> [2013-12-05 17:52:07] [FtpLoggingFilter] [141] [INFO] SENT: 226 Transfer complete.
+ 
+pool-3-thread-2> [2013-12-05 17:52:09] [FtpLoggingFilter] [84] [INFO] RECEIVED: TYPE I 
+pool-3-thread-1> [2013-12-05 17:52:09] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command TYPE okay.
+ 
+pool-3-thread-2> [2013-12-05 17:52:09] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-1> [2013-12-05 17:52:09] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,195,56)
+ 
+pool-3-thread-2> [2013-12-05 17:52:09] [FtpLoggingFilter] [84] [INFO] RECEIVED: RETR stone.properties 
+pool-3-thread-2> [2013-12-05 17:52:09] [RETR] [173] [INFO] File downloaded /stone.properties 
+pool-3-thread-2> [2013-12-05 17:52:09] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49976 
+pool-3-thread-2> [2013-12-05 17:52:09] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-2> [2013-12-05 17:52:09] [FtpLoggingFilter] [141] [INFO] SENT: 226 Transfer complete.
+ 
+pool-3-thread-1> [2013-12-05 17:52:10] [FtpLoggingFilter] [84] [INFO] RECEIVED: TYPE I 
+pool-3-thread-2> [2013-12-05 17:52:10] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command TYPE okay.
+ 
+pool-3-thread-1> [2013-12-05 17:52:10] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-2> [2013-12-05 17:52:10] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,195,58)
+ 
+pool-3-thread-1> [2013-12-05 17:52:10] [FtpLoggingFilter] [84] [INFO] RECEIVED: MLSD 
+pool-3-thread-1> [2013-12-05 17:52:10] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49978 
+pool-3-thread-1> [2013-12-05 17:52:10] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-1> [2013-12-05 17:52:10] [FtpLoggingFilter] [141] [INFO] SENT: 226 Closing data connection.
+ 
+pool-3-thread-2> [2013-12-05 17:52:11] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-1> [2013-12-05 17:52:11] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,195,60)
+ 
+pool-3-thread-2> [2013-12-05 17:52:11] [FtpLoggingFilter] [84] [INFO] RECEIVED: MLSD 
+pool-3-thread-2> [2013-12-05 17:52:11] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49980 
+pool-3-thread-2> [2013-12-05 17:52:11] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-2> [2013-12-05 17:52:11] [FtpLoggingFilter] [141] [INFO] SENT: 226 Closing data connection.
+ 
+pool-3-thread-1> [2013-12-05 17:52:12] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-2> [2013-12-05 17:52:12] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,195,62)
+ 
+pool-3-thread-1> [2013-12-05 17:52:12] [FtpLoggingFilter] [84] [INFO] RECEIVED: MLSD 
+pool-3-thread-1> [2013-12-05 17:52:12] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 49982 
+pool-3-thread-1> [2013-12-05 17:52:12] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-1> [2013-12-05 17:52:12] [FtpLoggingFilter] [141] [INFO] SENT: 226 Closing data connection.
+ 
+pool-3-thread-3> [2013-12-05 17:53:09] [FtpLoggingFilter] [159] [INFO] CLOSED 
+pool-3-thread-4> [2013-12-05 17:57:12] [FtpLoggingFilter] [159] [INFO] IDLE 
+pool-3-thread-4> [2013-12-05 17:57:12] [DefaultFtpHandler] [256] [INFO] Session idle, closing 
+pool-3-thread-4> [2013-12-05 17:57:12] [FtpLoggingFilter] [159] [INFO] CLOSED 
+NioProcessor-1> [2013-12-05 18:03:17] [FtpLoggingFilter] [159] [INFO] CREATED 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [159] [INFO] OPENED 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [141] [INFO] SENT: 220 Service ready for new user.
+ 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [84] [INFO] RECEIVED: USER kim 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [141] [INFO] SENT: 331 User name okay, need password for kim.
+ 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASS ***** 
+pool-3-thread-6> [2013-12-05 18:03:17] [PASS] [246] [INFO] Login success - kim 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [141] [INFO] SENT: 230 User logged in, proceed.
+ 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS UTF8 ON 
+pool-3-thread-7> [2013-12-05 18:03:17] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS MLST size;modify;type; 
+pool-3-thread-7> [2013-12-05 18:03:17] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [84] [INFO] RECEIVED: CWD / 
+pool-3-thread-7> [2013-12-05 18:03:17] [FtpLoggingFilter] [141] [INFO] SENT: 250 Directory changed to /
+ 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [84] [INFO] RECEIVED: TYPE I 
+pool-3-thread-7> [2013-12-05 18:03:17] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command TYPE okay.
+ 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-7> [2013-12-05 18:03:17] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,197,120)
+ 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [84] [INFO] RECEIVED: MLSD 
+pool-3-thread-6> [2013-12-05 18:03:17] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 50552 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-6> [2013-12-05 18:03:17] [FtpLoggingFilter] [141] [INFO] SENT: 226 Closing data connection.
+ 
+NioProcessor-2> [2013-12-05 18:03:23] [FtpLoggingFilter] [159] [INFO] CREATED 
+pool-3-thread-7> [2013-12-05 18:03:23] [FtpLoggingFilter] [159] [INFO] OPENED 
+pool-3-thread-6> [2013-12-05 18:03:23] [FtpLoggingFilter] [141] [INFO] SENT: 220 Service ready for new user.
+ 
+pool-3-thread-7> [2013-12-05 18:03:23] [FtpLoggingFilter] [84] [INFO] RECEIVED: USER kim 
+pool-3-thread-6> [2013-12-05 18:03:23] [FtpLoggingFilter] [141] [INFO] SENT: 331 User name okay, need password for kim.
+ 
+pool-3-thread-7> [2013-12-05 18:03:23] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASS ***** 
+pool-3-thread-7> [2013-12-05 18:03:23] [PASS] [246] [INFO] Login success - kim 
+pool-3-thread-7> [2013-12-05 18:03:23] [FtpLoggingFilter] [141] [INFO] SENT: 230 User logged in, proceed.
+ 
+pool-3-thread-6> [2013-12-05 18:03:23] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS UTF8 ON 
+pool-3-thread-7> [2013-12-05 18:03:23] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-6> [2013-12-05 18:03:23] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS MLST size;modify;type; 
+pool-3-thread-7> [2013-12-05 18:03:23] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-6> [2013-12-05 18:03:23] [FtpLoggingFilter] [84] [INFO] RECEIVED: CWD / 
+pool-3-thread-7> [2013-12-05 18:03:23] [FtpLoggingFilter] [141] [INFO] SENT: 250 Directory changed to /
+ 
+pool-3-thread-6> [2013-12-05 18:03:23] [FtpLoggingFilter] [84] [INFO] RECEIVED: TYPE A 
+pool-3-thread-7> [2013-12-05 18:03:23] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command TYPE okay.
+ 
+pool-3-thread-6> [2013-12-05 18:03:23] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-7> [2013-12-05 18:03:23] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,197,124)
+ 
+pool-3-thread-6> [2013-12-05 18:03:23] [FtpLoggingFilter] [84] [INFO] RECEIVED: STOR 1.xml 
+pool-3-thread-6> [2013-12-05 18:03:23] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 50556 
+pool-3-thread-6> [2013-12-05 18:03:23] [FtpLoggingFilter] [141] [INFO] SENT: 550 /1.xml: Permission denied.
+ 
+pool-3-thread-7> [2013-12-05 18:03:24] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-6> [2013-12-05 18:03:24] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,197,127)
+ 
+pool-3-thread-7> [2013-12-05 18:03:24] [FtpLoggingFilter] [84] [INFO] RECEIVED: MLSD 
+pool-3-thread-7> [2013-12-05 18:03:24] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 50559 
+pool-3-thread-7> [2013-12-05 18:03:24] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-7> [2013-12-05 18:03:24] [FtpLoggingFilter] [141] [INFO] SENT: 226 Closing data connection.
+ 
+main> [2013-12-05 18:03:31] [DefaultFtpServer] [89] [INFO] FTP server started 
+NioProcessor-3> [2013-12-05 18:03:44] [FtpLoggingFilter] [159] [INFO] CREATED 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [159] [INFO] OPENED 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [141] [INFO] SENT: 220 Service ready for new user.
+ 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [84] [INFO] RECEIVED: USER kim 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [141] [INFO] SENT: 331 User name okay, need password for kim.
+ 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASS ***** 
+pool-3-thread-1> [2013-12-05 18:03:44] [PASS] [246] [INFO] Login success - kim 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [141] [INFO] SENT: 230 User logged in, proceed.
+ 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS UTF8 ON 
+pool-3-thread-2> [2013-12-05 18:03:44] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS MLST size;modify;type; 
+pool-3-thread-2> [2013-12-05 18:03:44] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [84] [INFO] RECEIVED: CWD / 
+pool-3-thread-2> [2013-12-05 18:03:44] [FtpLoggingFilter] [141] [INFO] SENT: 250 Directory changed to /
+ 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [84] [INFO] RECEIVED: TYPE I 
+pool-3-thread-2> [2013-12-05 18:03:44] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command TYPE okay.
+ 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-2> [2013-12-05 18:03:44] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,197,156)
+ 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [84] [INFO] RECEIVED: MLSD 
+pool-3-thread-1> [2013-12-05 18:03:44] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 50588 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-1> [2013-12-05 18:03:44] [FtpLoggingFilter] [141] [INFO] SENT: 226 Closing data connection.
+ 
+pool-3-thread-2> [2013-12-05 18:03:45] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-1> [2013-12-05 18:03:45] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,197,158)
+ 
+pool-3-thread-2> [2013-12-05 18:03:45] [FtpLoggingFilter] [84] [INFO] RECEIVED: MLSD 
+pool-3-thread-2> [2013-12-05 18:03:45] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 50590 
+pool-3-thread-2> [2013-12-05 18:03:45] [FtpLoggingFilter] [141] [INFO] SENT: 150 File status okay; about to open data connection.
+ 
+pool-3-thread-2> [2013-12-05 18:03:45] [FtpLoggingFilter] [141] [INFO] SENT: 226 Closing data connection.
+ 
+NioProcessor-4> [2013-12-05 18:03:46] [FtpLoggingFilter] [159] [INFO] CREATED 
+pool-3-thread-1> [2013-12-05 18:03:46] [FtpLoggingFilter] [159] [INFO] OPENED 
+pool-3-thread-2> [2013-12-05 18:03:46] [FtpLoggingFilter] [141] [INFO] SENT: 220 Service ready for new user.
+ 
+pool-3-thread-1> [2013-12-05 18:03:46] [FtpLoggingFilter] [84] [INFO] RECEIVED: USER kim 
+pool-3-thread-2> [2013-12-05 18:03:46] [FtpLoggingFilter] [141] [INFO] SENT: 331 User name okay, need password for kim.
+ 
+pool-3-thread-1> [2013-12-05 18:03:46] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASS ***** 
+pool-3-thread-1> [2013-12-05 18:03:46] [PASS] [246] [INFO] Login success - kim 
+pool-3-thread-1> [2013-12-05 18:03:46] [FtpLoggingFilter] [141] [INFO] SENT: 230 User logged in, proceed.
+ 
+pool-3-thread-2> [2013-12-05 18:03:46] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS UTF8 ON 
+pool-3-thread-1> [2013-12-05 18:03:46] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-2> [2013-12-05 18:03:46] [FtpLoggingFilter] [84] [INFO] RECEIVED: OPTS MLST size;modify;type; 
+pool-3-thread-1> [2013-12-05 18:03:46] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command OPTS okay.
+ 
+pool-3-thread-2> [2013-12-05 18:03:46] [FtpLoggingFilter] [84] [INFO] RECEIVED: CWD / 
+pool-3-thread-1> [2013-12-05 18:03:46] [FtpLoggingFilter] [141] [INFO] SENT: 250 Directory changed to /
+ 
+pool-3-thread-2> [2013-12-05 18:03:46] [FtpLoggingFilter] [84] [INFO] RECEIVED: TYPE A 
+pool-3-thread-1> [2013-12-05 18:03:46] [FtpLoggingFilter] [141] [INFO] SENT: 200 Command TYPE okay.
+ 
+pool-3-thread-2> [2013-12-05 18:03:46] [FtpLoggingFilter] [84] [INFO] RECEIVED: PASV 
+pool-3-thread-1> [2013-12-05 18:03:46] [FtpLoggingFilter] [141] [INFO] SENT: 227 Entering Passive Mode (127,0,0,1,197,163)
+ 
+pool-3-thread-2> [2013-12-05 18:03:46] [FtpLoggingFilter] [84] [INFO] RECEIVED: STOR 1.xml 
+pool-3-thread-2> [2013-12-05 18:03:46] [PassivePorts] [242] [WARN] Releasing unreserved passive port: 50595 
+pool-3-thread-2> [2013-12-05 18:03:46] [FtpLoggingFilter] [141] [INFO] SENT: 550 /1.xml: Permission denied.
+ 
+pool-3-thread-3> [2013-12-05 18:04:47] [FtpLoggingFilter] [159] [INFO] CLOSED 
+pool-3-thread-4> [2013-12-05 18:08:45] [FtpLoggingFilter] [159] [INFO] IDLE 
+pool-3-thread-4> [2013-12-05 18:08:45] [DefaultFtpHandler] [256] [INFO] Session idle, closing 
+pool-3-thread-4> [2013-12-05 18:08:45] [FtpLoggingFilter] [159] [INFO] CLOSED 
