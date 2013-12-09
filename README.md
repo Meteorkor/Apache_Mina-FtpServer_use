@@ -1,5 +1,8 @@
 Apache_Mina-FtpServer_use
 =========================
+http://mina.apache.org/ftpserver-project/
+에서 다운로드
+
 Mina FTP Server Ex
 
 
