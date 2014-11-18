@@ -1,16 +1,15 @@
 package com.meteor.module;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ftpserver.ftplet.Authority;
 import org.apache.ftpserver.ftplet.FtpException;
 import org.apache.ftpserver.ftplet.UserManager;
-
 import org.apache.ftpserver.usermanager.PropertiesUserManagerFactory;
 import org.apache.ftpserver.usermanager.SaltedPasswordEncryptor;
-
 import org.apache.ftpserver.usermanager.impl.BaseUser;
 import org.apache.ftpserver.usermanager.impl.WritePermission;
 import org.slf4j.Logger;
@@ -24,17 +23,28 @@ public class Ftp_UserManager {
 
 	
 	private PropertiesUserManagerFactory userManagerFactory;
-	private UserManager um;
+	private UserManager user_manager;
 	private String store_home = "C://FTP_STORE";
-	private String user_File_name = "c://stone/stone.properties";
+	private String Configuration_File_Name = "c://stone/stone.properties";
 	
 	public Ftp_UserManager(){
 		
 		userManagerFactory = new PropertiesUserManagerFactory();
-		userManagerFactory.setFile(new File(user_File_name) );
+		File configFile = new File( Configuration_File_Name );
+		
+		if(!configFile.exists()){//if Not Exist File, Create New File
+			try {
+				configFile.createNewFile();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		userManagerFactory.setFile( configFile );
 		userManagerFactory.setPasswordEncryptor(new SaltedPasswordEncryptor());
 		
-		um = userManagerFactory.createUserManager();
+		user_manager = userManagerFactory.createUserManager();
 	}
 	/**
 	 * Create Ftp_User
@@ -45,7 +55,7 @@ public class Ftp_UserManager {
 	public void create_user(String id, String pwd, boolean doWriter){
 		
 		try {
-			if(!um.doesExist(id)){
+			if(!user_manager.doesExist(id)){
 			BaseUser user = new BaseUser();
 			
 			user.setName(id);
@@ -58,7 +68,7 @@ public class Ftp_UserManager {
 					user.setAuthorities(auth);
 				}
 			
-				um.save(user);
+				user_manager.save(user);
 				logger.info("OK User Create");
 			}//
 		} catch (FtpException e) {
@@ -67,15 +77,15 @@ public class Ftp_UserManager {
 		}
 	}
 	/**
-	 * 
+	 * Delete User
 	 * @param id : User Name
 	 */
 	public boolean delete_user(String id){
 		
 		
 		try {
-			if(um.doesExist(id)){
-				um.delete(id);
+			if(user_manager.doesExist(id)){
+				user_manager.delete(id);
 				
 				logger.info("OK User Delete");
 				return true;
@@ -91,17 +101,17 @@ public class Ftp_UserManager {
 	
 	}
 	public UserManager get_UserManager(){
-		return um;
+		return user_manager;
 	}
 	/**
-	 * 
+	 * Setting Permit to User for Write
 	 * @param id : User Name
 	 * @param doWriter : Write Permission
 	 */
 	public boolean set_user_WritePermission(String id, boolean doWriter){
 		try {
-			if(um.doesExist(id)){
-				BaseUser user = (BaseUser) um.getUserByName(id); 
+			if(user_manager.doesExist(id)){
+				BaseUser user = (BaseUser) user_manager.getUserByName(id); 
 				List<Authority> auth = new ArrayList<Authority>();
 				
 				
@@ -109,7 +119,7 @@ public class Ftp_UserManager {
 					auth.add(new WritePermission());	
 				}
 				user.setAuthorities(auth);
-				um.save(user);
+				user_manager.save(user);
 				return true;
 				
 			}
@@ -119,14 +129,20 @@ public class Ftp_UserManager {
 		}
 				return false;
 	}
-	//
+
+	/**
+	 * Setting Home Dir
+	 * @param id
+	 * @param dir
+	 * @return
+	 */
 	public boolean set_user_Dir(String id, String dir){
 		try {
-			if(um.doesExist(id)){
-				BaseUser user = (BaseUser) um.getUserByName(id); 
+			if(user_manager.doesExist(id)){
+				BaseUser user = (BaseUser) user_manager.getUserByName(id); 
 				user.setHomeDirectory(dir);
 				
-				um.save(user);
+				user_manager.save(user);
 				return true;
 			}
 		} catch (FtpException e) {
@@ -135,12 +151,18 @@ public class Ftp_UserManager {
 		}
 				return false;
 	}
+	/**
+	 * Setting User Pwd
+	 * @param id
+	 * @param pwd
+	 * @return
+	 */
 	public boolean set_user_Pwd(String id, String pwd){
 		try {
-			if(um.doesExist(id)){
-				BaseUser user = (BaseUser) um.getUserByName(id); 
+			if(user_manager.doesExist(id)){
+				BaseUser user = (BaseUser) user_manager.getUserByName(id); 
 				user.setPassword(pwd);
-				um.save(user);
+				user_manager.save(user);
 				return true;
 			}
 		} catch (FtpException e) {
